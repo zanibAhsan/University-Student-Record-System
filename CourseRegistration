@@ -1,0 +1,33 @@
+#ifndef UNTITLED9_COURSEREGISTRATION_H
+#define UNTITLED9_COURSEREGISTRATION_H
+
+#include <iostream>
+#include "Course.h"
+using namespace std;
+
+class CourseRegistration : public Course {
+private:
+    int maxSize;
+    int Number_of_students_enrolled;
+    int* studentIDs;
+
+public:
+    CourseRegistration();
+    CourseRegistration(string d, int c, string n, string p, int m);
+
+    int getNumber_of_students_enrolled();
+    int getmaxSize();
+
+    void setmaxSize(int m);
+    void setNumber_of_students_enrolled(int n);
+
+    int registerStudent(int studentID);
+    int removeStudent(int studentID);
+    bool isStudentInCourse(int Student_ID);
+
+    void print();
+
+    ~CourseRegistration();
+};
+
+#endif
